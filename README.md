@@ -27,6 +27,27 @@ It operates with **Zero Cloud Dependency**. All analytics, heatmaps, and telemet
 *   **Smart Scheduling Timer:** Restrict charger activation to specific hours of the day (e.g., off-peak electricity hours).
 *   **OTA Updates:** Flash new `.bin` firmware files directly through the web interface without touching the hardware.
 
+## 🔔 System Alerts & Audio Events
+
+AeonGrid keeps you actively informed of critical power changes through both physical buzzer patterns and remote Telegram push notifications.
+
+### 📱 Telegram Push Alerts
+If enabled in the dashboard settings, the bot will automatically notify you when:
+*   **Grid Drops:** 🔴 Power cut detected.
+*   **Grid Restored:** 🟢 Power restored (includes the total outage duration).
+*   **Battery at 50%:** 🔋 Warning that battery is at half capacity.
+*   **Battery at 30%:** 🔋 Warning that battery is getting low.
+*   **Battery Critical:** ⚠️ Low-Cut limit reached, auto-cut imminent.
+*   **Charge Complete:** ✅ High-Cut limit reached, charger turned off safely.
+
+### 🔊 Buzzer Beep Codes
+The onboard Piezo buzzer uses specific beep patterns to indicate hardware states (this can be easily muted via the dashboard UI):
+*   **1 Short Beep:** System Booted / Charger toggled OFF.
+*   **2 Short Beeps:** Charger toggled ON.
+*   **3 Quick Beeps:** Grid Power Cut detected!
+*   **5 Quick Beeps:** Battery dropped to 30% capacity.
+*   **1 Long Beep (5 Seconds):** CRITICAL - Battery empty (Low-Cut limit reached).
+
 ## 🛠️ Hardware Requirements
 
 *   **Microcontroller:** ESP8266 NodeMCU V3
