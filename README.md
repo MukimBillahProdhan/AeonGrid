@@ -82,7 +82,7 @@ Instead of dealing with dangerous high-voltage AC wiring, we use a simple, isola
 
 | ESP8266 Pin | Component / Function | Wiring Connection |
 | --- | --- | --- |
-| **`A0`** | Voltage Divider | Middle of R1 (100kΩ) and R2 (10kΩ) from Battery. |
+| **`A0`** | Dc Voltage  | Middle of R1 (100kΩ) and R2 (10kΩ) from Battery. |
 | **`D1` (GPIO 5)** | AC Grid Sensor | 5V+ line from the Grid-plugged USB charger. |
 | **`D6` (GPIO 12)** | Charger Relay | `IN1` or `IN2` on the 2-Channel Relay Module. |
 | **`D7` (GPIO 13)** | Piezo Buzzer | Positive pin of the Piezo buzzer. |
