@@ -48,20 +48,7 @@ The onboard Piezo buzzer uses specific beep patterns to indicate hardware states
 *   **5 Quick Beeps:** Battery dropped to 30% capacity.
 *   **1 Long Beep (5 Seconds):** CRITICAL - Battery empty (Low-Cut limit reached).
 
-## 🛠️ Hardware Requirements
 
-*   **Microcontroller:** ESP8266 NodeMCU V3
-*   **Battery System:** Designed for a 24V setup (2x 12V Drycells in series), but perfectly supports 12V/48V Lead-Acid, LiFePO4, or Lithium-Ion depending on your charger and voltage divider scaling.
-*   **Voltage Sensing:** Custom Voltage Divider Network (connected to A0).
-*   **Grid AC Sensing:** A standard 5V USB phone charger plugged into the grid to safely provide a 5V (make sure use a reg for 3.3v) HIGH/LOW signal to the ESP8266 when power drops.
-*   **Control:** Standard 2-Channel 5V Relay Module.
-
-## 🚀 Installation & Setup
-
-1. **Flash the Firmware:** Compile and upload `AeonGrid.ino` using the Arduino IDE. Ensure your flash size is set to include at least **1MB or 2MB FS (LittleFS)**.
-2. **Connect to AP:** Upon first boot, the device will host its own Wi-Fi network named `AeonGrid_AP` (Password: `12345678`).
-3. **Configure Network:** Navigate to `http://192.168.4.1` in your browser. Use the settings panel to enter your home Wi-Fi SSID and Password. The device will reboot and join your network.
-4. **Calibrate:** Access the dashboard via its local IP or via mDNS. Under Settings, enter the exact voltage reading from a digital multimeter into the calibration field to sync the A0 pin accuracy.
 
 
 
